@@ -25,7 +25,8 @@ if (!fs.existsSync(usersFile)) {
 }
 
 function getUsers() {
-  return JSON.parse(fs.readFileSync(usersFile, "utf8"));
+  const contents = fs.readFileSync(usersFile, "utf8");
+  return contents.trim() ? JSON.parse(contents) : [];
 }
 
 function saveUsers(users) {
