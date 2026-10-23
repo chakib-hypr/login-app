@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="page">
+        <div class="form-box active" id="login-form">
+            <form id="login">
+                <h2>Login</h2>
+                <input type="text" name="username" placeholder="Username" autocomplete="username" required>
+                <input type="password" name="password" placeholder="Password" autocomplete="current-password" required>
+                <p class="message" id="login-message"></p>
+                <button type="submit">Login</button>
+                <p>Don't have an account? <a href="#" onclick="showForms('register-form')">Register</a></p>
+            </form>
+        </div>
+
+        <div class="form-box" id="register-form">
+            <form id="register">
+                <h2>Register</h2>
+                <input type="text" name="username" placeholder="Username" autocomplete="username" required>
+                <input type="password" name="password" placeholder="Password (8+ characters)" autocomplete="new-password" required>
+                <p class="message" id="register-message"></p>
+                <button type="submit">Register</button>
+                <p>Already have an account? <a href="#" onclick="showForms('login-form')">Login</a></p>
+            </form>
+        </div>
+
+        <div class="form-box" id="profile">
+            <h2>Welcome</h2>
+            <p id="profile-text"></p>
+            <button type="button" id="logout">Logout</button>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
